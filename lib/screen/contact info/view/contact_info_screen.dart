@@ -66,76 +66,80 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
               SizedBox(
                 height: 10,
               ),
-              Row(
-                children: [
-                  Spacer(),
-                  Container(
-                    width: MediaQuery.sizeOf(context).width * 0.25,
-                    height: MediaQuery.sizeOf(context).height * 0.08,
-                    decoration: BoxDecoration(
-                      color: CupertinoColors.systemGrey6,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.all(5),
-                      child: Column(
-                        children: [
-                          Icon(CupertinoIcons.ellipses_bubble),
-                          Text(
-                            "Message",
-                            style: TextStyle(
-                                color: CupertinoColors.black, fontSize: 15),
-                          )
-                        ],
+              Align(
+                alignment: Alignment.center,
+                child: Row(
+                  children: [
+                    Container(
+                      width: MediaQuery.sizeOf(context).width * 0.25,
+                      height: MediaQuery.sizeOf(context).height * 0.08,
+                      decoration: BoxDecoration(
+                        color: CupertinoColors.systemGrey6,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(5),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(CupertinoIcons.ellipses_bubble),
+                            Text(
+                              "Message",
+                              style: TextStyle(
+                                  color: CupertinoColors.black, fontSize: 18),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Spacer(),
-                  Container(
-                    width: MediaQuery.sizeOf(context).width * 0.25,
-                    height: MediaQuery.sizeOf(context).height * 0.08,
-                    decoration: BoxDecoration(
-                      color: CupertinoColors.systemGrey6,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.all(5),
-                      child: Column(
-                        children: [
-                          Icon(CupertinoIcons.phone),
-                          Text(
-                            "call",
-                            style: TextStyle(
-                                color: CupertinoColors.black, fontSize: 15),
-                          )
-                        ],
+                    Spacer(),
+                    Container(
+                      width: MediaQuery.sizeOf(context).width * 0.25,
+                      height: MediaQuery.sizeOf(context).height * 0.08,
+                      decoration: BoxDecoration(
+                        color: CupertinoColors.systemGrey6,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(5),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(CupertinoIcons.phone),
+                            Text(
+                              "call",
+                              style: TextStyle(
+                                  color: CupertinoColors.black, fontSize: 18),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Spacer(),
-                  Container(
-                    width: MediaQuery.sizeOf(context).width * 0.25,
-                    height: MediaQuery.sizeOf(context).height * 0.08,
-                    decoration: BoxDecoration(
-                      color: CupertinoColors.systemGrey6,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.all(5),
-                      child: Column(
-                        children: [
-                          Icon(CupertinoIcons.mail),
-                          Text(
-                            "Mail",
-                            style: TextStyle(
-                                color: CupertinoColors.black, fontSize: 15),
-                          )
-                        ],
+                    Spacer(),
+                    Container(
+                      width: MediaQuery.sizeOf(context).width * 0.25,
+                      height: MediaQuery.sizeOf(context).height * 0.08,
+                      decoration: BoxDecoration(
+                        color: CupertinoColors.systemGrey6,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(5),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(CupertinoIcons.mail),
+                            Text(
+                              "Mail",
+                              style: TextStyle(
+                                  color: CupertinoColors.black, fontSize: 18),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Spacer(),
-                ],
+                  ],
+                ),
               ),
               SizedBox(
                 height: 10,
@@ -154,12 +158,12 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                     Text(
                       "Mobile",
                       style:
-                          TextStyle(fontSize: 18, color: CupertinoColors.black),
+                          TextStyle(fontSize: 20, color: CupertinoColors.black),
                     ),
                     Text(
                       "(888) 555-3333",
                       style: TextStyle(
-                          fontSize: 15, color: CupertinoColors.activeBlue),
+                          fontSize: 18, color: CupertinoColors.activeBlue),
                     ),
                     Divider(
                       thickness: 1,
@@ -167,12 +171,12 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                     Text(
                       "home",
                       style:
-                          TextStyle(fontSize: 18, color: CupertinoColors.black),
+                          TextStyle(fontSize: 20, color: CupertinoColors.black),
                     ),
                     Text(
                       "(888) 555-3333",
                       style: TextStyle(
-                          fontSize: 15, color: CupertinoColors.activeBlue),
+                          fontSize: 18, color: CupertinoColors.activeBlue),
                     ),
                   ],
                 ),
@@ -194,12 +198,12 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                     Text(
                       "Work",
                       style:
-                          TextStyle(fontSize: 18, color: CupertinoColors.black),
+                          TextStyle(fontSize: 20, color: CupertinoColors.black),
                     ),
                     Text(
                       "keval-Appleseed@mac.com",
                       style: TextStyle(
-                          fontSize: 15, color: CupertinoColors.activeBlue),
+                          fontSize: 18, color: CupertinoColors.activeBlue),
                     ),
                   ],
                 ),
@@ -221,12 +225,12 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                     Text(
                       "work",
                       style:
-                          TextStyle(fontSize: 18, color: CupertinoColors.black),
+                          TextStyle(fontSize: 20, color: CupertinoColors.black),
                     ),
                     Text(
                       "3494 kuhl Avenue\n Atlanta GA 30303 \n UAS",
                       style:
-                          TextStyle(fontSize: 15, color: CupertinoColors.black),
+                          TextStyle(fontSize: 18, color: CupertinoColors.black),
                     ),
                     Divider(
                       thickness: 1,
@@ -234,12 +238,12 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                     Text(
                       "home",
                       style:
-                          TextStyle(fontSize: 18, color: CupertinoColors.black),
+                          TextStyle(fontSize: 20, color: CupertinoColors.black),
                     ),
                     Text(
                       "1234 xyz surat \n a.k.road GA 30303\n USA",
                       style: TextStyle(
-                          fontSize: 15, color: CupertinoColors.black),
+                          fontSize: 18, color: CupertinoColors.black),
                     ),
                   ],
                 ),
