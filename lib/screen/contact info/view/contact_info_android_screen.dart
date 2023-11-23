@@ -48,7 +48,7 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
               child: Text(
                 "A",
                 style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 32,
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
@@ -56,7 +56,7 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
             SizedBox(height: 10,),
             Text(
               "Ankit Kansara",
-              style: TextStyle(fontSize: 25, color: Colors.black),
+              style: TextStyle(fontSize: 27, color: Colors.black),
             ),
             SizedBox(
               height: 10,
@@ -140,7 +140,7 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                 children: [
                   Text(
                     "Contact info",
-                    style: TextStyle(fontSize: 20, color: Colors.black),
+                    style: TextStyle(fontSize: 22, color: Colors.black),
                   ),
                   SizedBox(
                     height: 10,
@@ -156,11 +156,11 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                         children: [
                           Text(
                             "+91 1234 5678 90",
-                            style: TextStyle(fontSize: 15, color: Colors.black),
+                            style: TextStyle(fontSize: 18, color: Colors.black),
                           ),
                           Text(
                             "phone",
-                            style: TextStyle(fontSize: 12, color: Colors.black),
+                            style: TextStyle(fontSize: 15, color: Colors.black),
                           ),
                         ],
                       ),
@@ -179,15 +179,15 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                     children: [
                       Image.asset(
                         "assets/image/w1.png",
-                        width: 20,
-                        height: 20,
+                        width: 25,
+                        height: 25,
                       ),
                       SizedBox(
                         width: 10,
                       ),
                       Text(
                         "Message +91 1234 5678 90",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: 18),
                       )
                     ],
                   ),
@@ -198,15 +198,15 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                     children: [
                       Image.asset(
                         "assets/image/w1.png",
-                        width: 20,
-                        height: 20,
+                        width: 25,
+                        height: 25,
                       ),
                       SizedBox(
                         width: 10,
                       ),
                       Text(
                         "Voice call +91 1234 5678 90",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: 18),
                       )
                     ],
                   ),
@@ -217,15 +217,15 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                     children: [
                       Image.asset(
                         "assets/image/w1.png",
-                        width: 20,
-                        height: 20,
+                        width: 25,
+                        height: 25,
                       ),
                       SizedBox(
                         width: 10,
                       ),
                       Text(
                         "Video Call +91 1234 5678 90",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: 18),
                       )
                     ],
                   ),

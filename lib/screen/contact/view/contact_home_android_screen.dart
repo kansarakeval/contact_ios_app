@@ -18,7 +18,7 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
           leading: IconButton(
             icon: const Icon(Icons.add),
             onPressed: () {
-              Navigator.pushNamed(context, 'androidinfo');
+              Navigator.pushNamed(context, 'infoAndroid');
             },
           ),
           title: const Text(
@@ -28,7 +28,19 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
           ),
           centerTitle: true,
           actions: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.info_outline))
+            IconButton(onPressed: () {
+              showModalBottomSheet(context: context,
+                builder: (context) =>
+                    BottomSheet(onClosing: () {}, builder: (context) =>Container(
+                      height: 100,
+                      child: Column(
+                        children: [
+                          ElevatedButton(onPressed: (){}, child: Text("yes"),),
+                          ElevatedButton(onPressed: (){}, child: Text("No"),),
+                        ],
+                      ),
+                    ),),);
+            }, icon: Icon(Icons.info_outline))
           ],
         ),
         body: SingleChildScrollView(
@@ -38,8 +50,12 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
               children: [
                 Container(
                   padding: const EdgeInsets.all(5),
-                  height: MediaQuery.sizeOf(context).height * 0.04,
-                  width: MediaQuery.sizeOf(context).width,
+                  height: MediaQuery
+                      .sizeOf(context)
+                      .height * 0.04,
+                  width: MediaQuery
+                      .sizeOf(context)
+                      .width,
                   child: const Text(
                     "A",
                     style: TextStyle(
@@ -126,8 +142,12 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
                 ),
                 Container(
                   padding: const EdgeInsets.all(5),
-                  height: MediaQuery.sizeOf(context).height * 0.04,
-                  width: MediaQuery.sizeOf(context).width,
+                  height: MediaQuery
+                      .sizeOf(context)
+                      .height * 0.04,
+                  width: MediaQuery
+                      .sizeOf(context)
+                      .width,
                   child: const Text(
                     "B",
                     style: TextStyle(
@@ -214,8 +234,12 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
                 ),
                 Container(
                   padding: const EdgeInsets.all(5),
-                  height: MediaQuery.sizeOf(context).height * 0.04,
-                  width: MediaQuery.sizeOf(context).width,
+                  height: MediaQuery
+                      .sizeOf(context)
+                      .height * 0.04,
+                  width: MediaQuery
+                      .sizeOf(context)
+                      .width,
                   child: const Text(
                     "K",
                     style: TextStyle(
@@ -277,8 +301,12 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
                 ),
                 Container(
                   padding: const EdgeInsets.all(5),
-                  height: MediaQuery.sizeOf(context).height * 0.04,
-                  width: MediaQuery.sizeOf(context).width,
+                  height: MediaQuery
+                      .sizeOf(context)
+                      .height * 0.04,
+                  width: MediaQuery
+                      .sizeOf(context)
+                      .width,
                   child: const Text(
                     "M",
                     style: TextStyle(

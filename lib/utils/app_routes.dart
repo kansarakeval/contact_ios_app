@@ -5,8 +5,10 @@ import '../screen/contact info/view/contact_info_android_screen.dart';
 import '../screen/contact info/view/contact_info_screen.dart';
 
 Map<String, WidgetBuilder> screen_routes = {
-  // '/':(context) => const ContactHomeScreen(),
-  // 'info':(context) => const ContactInfoScreen(),
   '/':(context) => const ContactHomeAndroidScreen(),
-  'androidinfo':(context) => const ContactInfoAndroidScreen()
+  'infoAndroid':(context) => const ContactInfoAndroidScreen()
+};
+Map<String, WidgetBuilder> ios_screen_routes = {
+  '/':(context) => const ContactHomeScreen(),
+  'info':(context) => const ContactInfoScreen(),
 };

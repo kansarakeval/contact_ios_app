@@ -55,6 +55,9 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                             fontWeight: FontWeight.bold),
                       ),
                     ),
+                    SizedBox(
+                      height: 20,
+                    ),
                     Text(
                       "keval kansara",
                       style:
@@ -64,7 +67,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Align(
                 alignment: Alignment.center,
@@ -142,7 +145,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Container(
                 padding: EdgeInsets.all(10),
@@ -160,6 +163,9 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                       style:
                           TextStyle(fontSize: 20, color: CupertinoColors.black),
                     ),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Text(
                       "(888) 555-3333",
                       style: TextStyle(
@@ -172,6 +178,9 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                       "home",
                       style:
                           TextStyle(fontSize: 20, color: CupertinoColors.black),
+                    ),
+                    SizedBox(
+                      height: 5,
                     ),
                     Text(
                       "(888) 555-3333",
@@ -200,6 +209,9 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                       style:
                           TextStyle(fontSize: 20, color: CupertinoColors.black),
                     ),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Text(
                       "keval-Appleseed@mac.com",
                       style: TextStyle(
@@ -213,7 +225,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
               ),
               Container(
                 padding: EdgeInsets.all(10),
-                height: MediaQuery.sizeOf(context).height * 0.25,
+                height: MediaQuery.sizeOf(context).height * 0.27,
                 width: MediaQuery.sizeOf(context).height,
                 decoration: BoxDecoration(
                   color: CupertinoColors.systemGrey6,
@@ -226,6 +238,9 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                       "work",
                       style:
                           TextStyle(fontSize: 20, color: CupertinoColors.black),
+                    ),
+                    SizedBox(
+                      height: 5,
                     ),
                     Text(
                       "3494 kuhl Avenue\n Atlanta GA 30303 \n UAS",
@@ -240,10 +255,13 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                       style:
                           TextStyle(fontSize: 20, color: CupertinoColors.black),
                     ),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Text(
                       "1234 xyz surat \n a.k.road GA 30303\n USA",
-                      style: TextStyle(
-                          fontSize: 18, color: CupertinoColors.black),
+                      style:
+                          TextStyle(fontSize: 18, color: CupertinoColors.black),
                     ),
                   ],
                 ),
