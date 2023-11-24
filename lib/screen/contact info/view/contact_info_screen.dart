@@ -301,7 +301,6 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                                 context: context,
                                 builder: (context) => SizedBox(
                                   height: 200,
-                                  
                                   child: CupertinoDatePicker(
                                     initialDateTime: providerr!.date,
                                     backgroundColor: Colors.white,
