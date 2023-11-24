@@ -74,7 +74,7 @@ class _ContactHomeScreenState extends State<ContactHomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: 80,
+                  height: 100,
                 ),
                 Text(
                   "Contact",

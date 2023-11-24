@@ -64,7 +64,7 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
                     child: Text("Date",style: TextStyle(fontSize: 15),),
                 ),
                 const PopupMenuItem(
-                    child: Text("Setting",style: TextStyle(fontSize: 15),),
+                    child: Text("time",style: TextStyle(fontSize: 15),),
                 ),
               ];
             },

@@ -60,7 +60,9 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                     color: Colors.black),
               ),
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             const Text(
               "Ankit Kansara",
               style: TextStyle(fontSize: 27, color: Colors.black),
@@ -136,12 +138,8 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
             Container(
               margin: const EdgeInsets.all(10),
               padding: const EdgeInsets.all(10),
-              width: MediaQuery
-                  .sizeOf(context)
-                  .width,
-              height: MediaQuery
-                  .sizeOf(context)
-                  .height * 0.40,
+              width: MediaQuery.sizeOf(context).width,
+              height: MediaQuery.sizeOf(context).height * 0.42,
               decoration: BoxDecoration(
                 color: Colors.grey.shade200,
                 borderRadius: BorderRadius.circular(20),
@@ -241,24 +239,40 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                     ],
                   ),
                   const SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   Row(
                     children: [
                       Text(
-                        "Date ${providerw!.date!.day}/${providerw!.date!
-                            .month}/${providerw!.date!.year}",
+                        "Date ${providerw!.date!.day}/${providerw!.date!.month}/${providerw!.date!.year}",
                         style: const TextStyle(fontSize: 18),
                       ),
                       const Spacer(),
-                      IconButton(onPressed: () async {
-                       DateTime? d1 = await showDatePicker(context: context,
+                      IconButton(
+                        onPressed: () async {
+                          DateTime? d1 = await showDatePicker(
+                            context: context,
                             initialDate: providerr!.date!,
                             firstDate: DateTime(2001),
                             lastDate: DateTime(2025),
-                        );
-                       providerr!.changDate(d1!);
-                      }, icon: const Icon(Icons.date_range),)
+                          );
+                          providerr!.changDate(d1!);
+                        },
+                        icon: const Icon(Icons.date_range),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        "Time mm:ss:hh",
+                        style: const TextStyle(fontSize: 18),
+                      ),
+                      const Spacer(),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.watch_later_outlined),
+                      )
                     ],
                   ),
                 ],

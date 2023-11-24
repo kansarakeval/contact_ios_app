@@ -277,7 +277,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
               ),
               Container(
                 padding: EdgeInsets.all(10),
-                height: MediaQuery.sizeOf(context).height * 0.08,
+                height: MediaQuery.sizeOf(context).height * 0.07,
                 width: MediaQuery.sizeOf(context).height,
                 decoration: BoxDecoration(
                   color: CupertinoColors.systemGrey6,
