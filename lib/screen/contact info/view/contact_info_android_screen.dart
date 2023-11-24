@@ -265,14 +265,19 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                   Row(
                     children: [
                       Text(
-                        "Time mm:ss:hh",
+                        "Time ${providerw!.time!.hour}:${providerw!.time!.minute}",
                         style: const TextStyle(fontSize: 18),
                       ),
                       const Spacer(),
                       IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.watch_later_outlined),
-                      )
+                          onPressed: ()  async {
+                            TimeOfDay? d2 =  await showTimePicker(
+                              context: context,
+                              initialTime: providerr!.time!,
+                            );
+                            providerr!.changTime(d2!);
+                          },
+                          icon: const Icon(Icons.watch_later_outlined),),
                     ],
                   ),
                 ],

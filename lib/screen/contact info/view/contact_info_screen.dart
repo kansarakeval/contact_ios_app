@@ -277,7 +277,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
               ),
               Container(
                 padding: EdgeInsets.all(10),
-                height: MediaQuery.sizeOf(context).height * 0.07,
+                height: MediaQuery.sizeOf(context).height * 0.20,
                 width: MediaQuery.sizeOf(context).height,
                 decoration: BoxDecoration(
                   color: CupertinoColors.systemGrey6,
@@ -311,9 +311,32 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                                 ),
                               );
                             },
-                            child: Icon(CupertinoIcons.time))
+                            child: Icon(CupertinoIcons.calendar),),
                       ],
                     ),
+                    Row(
+                      children: [
+                        Text("Time : ${providerr!.time!.hour}:${providerr!.time!.minute}"),
+                        Spacer(),
+                        // GestureDetector(onTap: (){
+                        //   showCupertinoModalPopup(context: context,
+                        //     builder:(context) => SizedBox(
+                        //       height: 200,
+                        //       child: CupertinoDatePicker(
+                        //         backgroundColor: Colors.grey.shade500,
+                        //         initialDateTime: providerr!.time,
+                        //         mode: CupertinoDatePickerMode.time,
+                        //         use24hFormat: true,
+                        //         onDateTimeChanged: (value) {
+                        //           providerr!.changTime(value);
+                        //         },),
+                        //     ),
+                        //   );
+                        //     },
+                        //     child: Icon(CupertinoIcons.time)),
+                      ],
+                    ),
+
                   ],
                 ),
               ),
