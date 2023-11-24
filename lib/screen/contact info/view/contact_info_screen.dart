@@ -1,5 +1,7 @@
+import 'package:contact_ios_app/screen/contact/provider/homeprovider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ContactInfoScreen extends StatefulWidget {
   const ContactInfoScreen({super.key});
@@ -9,8 +11,12 @@ class ContactInfoScreen extends StatefulWidget {
 }
 
 class _ContactInfoScreenState extends State<ContactInfoScreen> {
+  HomeProvider? providerw;
+  HomeProvider? providerr;
   @override
   Widget build(BuildContext context) {
+    providerw = context.watch<HomeProvider>();
+    providerr = context.read<HomeProvider>();
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         leading: Row(
@@ -262,6 +268,52 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                       "1234 xyz surat \n a.k.road GA 30303\n USA",
                       style:
                           TextStyle(fontSize: 18, color: CupertinoColors.black),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                height: MediaQuery.sizeOf(context).height * 0.08,
+                width: MediaQuery.sizeOf(context).height,
+                decoration: BoxDecoration(
+                  color: CupertinoColors.systemGrey6,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          "Date ${providerw!.date!.day}/${providerw!.date!
+                              .month}/${providerw!.date!.year}",
+                          style: TextStyle(
+                              fontSize: 20, color: CupertinoColors.black),
+                        ),
+                        Spacer(),
+                        GestureDetector(
+                            onTap: () {
+                              showCupertinoModalPopup(
+                                context: context,
+                                builder: (context) => SizedBox(
+                                  height: 200,
+                                  
+                                  child: CupertinoDatePicker(
+                                    initialDateTime: providerr!.date,
+                                    backgroundColor: Colors.white,
+                                    onDateTimeChanged: (value) {
+                                      providerr!.changDate(value);
+                                    },
+                                  ),
+                                ),
+                              );
+                            },
+                            child: Icon(CupertinoIcons.time))
+                      ],
                     ),
                   ],
                 ),

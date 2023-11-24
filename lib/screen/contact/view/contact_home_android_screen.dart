@@ -1,4 +1,6 @@
+import 'package:contact_ios_app/screen/contact/provider/homeprovider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ContactHomeAndroidScreen extends StatefulWidget {
   const ContactHomeAndroidScreen({super.key});
@@ -28,19 +30,45 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
           ),
           centerTitle: true,
           actions: [
-            IconButton(onPressed: () {
-              showModalBottomSheet(context: context,
-                builder: (context) =>
-                    BottomSheet(onClosing: () {}, builder: (context) =>Container(
-                      height: 100,
-                      child: Column(
-                        children: [
-                          ElevatedButton(onPressed: (){}, child: Text("yes"),),
-                          ElevatedButton(onPressed: (){}, child: Text("No"),),
-                        ],
+            IconButton(
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    builder: (context) => BottomSheet(
+                      onClosing: () {},
+                      builder: (context) => Container(
+                        height: 100,
+                        child: Column(
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: const Text("yes"),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: const Text("No"),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),),);
-            }, icon: Icon(Icons.info_outline))
+                    ),
+                  );
+                },
+                icon: const Icon(Icons.info_outline)),
+            PopupMenuButton(itemBuilder: (context) {
+              return [
+                const PopupMenuItem(
+                    child: Text("Setting",style: TextStyle(fontSize: 15),),
+                ),
+                const PopupMenuItem(
+                    child: Text("Setting",style: TextStyle(fontSize: 15),),
+                ),
+                const PopupMenuItem(
+                    child: Text("Setting",style: TextStyle(fontSize: 15),),
+                ),
+              ];
+            },
+            ),
           ],
         ),
         body: SingleChildScrollView(
@@ -50,12 +78,9 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
               children: [
                 Container(
                   padding: const EdgeInsets.all(5),
-                  height: MediaQuery
-                      .sizeOf(context)
-                      .height * 0.04,
-                  width: MediaQuery
-                      .sizeOf(context)
-                      .width,
+                  height: MediaQuery.sizeOf(context).height * 0.04,
+                  width: MediaQuery.sizeOf(context).width,
+                  color: Colors.grey.shade200,
                   child: const Text(
                     "A",
                     style: TextStyle(
@@ -63,7 +88,6 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
                   ),
-                  color: Colors.grey.shade200,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -142,12 +166,9 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
                 ),
                 Container(
                   padding: const EdgeInsets.all(5),
-                  height: MediaQuery
-                      .sizeOf(context)
-                      .height * 0.04,
-                  width: MediaQuery
-                      .sizeOf(context)
-                      .width,
+                  height: MediaQuery.sizeOf(context).height * 0.04,
+                  width: MediaQuery.sizeOf(context).width,
+                  color: Colors.grey.shade200,
                   child: const Text(
                     "B",
                     style: TextStyle(
@@ -155,7 +176,6 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
                   ),
-                  color: Colors.grey.shade200,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -234,12 +254,9 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
                 ),
                 Container(
                   padding: const EdgeInsets.all(5),
-                  height: MediaQuery
-                      .sizeOf(context)
-                      .height * 0.04,
-                  width: MediaQuery
-                      .sizeOf(context)
-                      .width,
+                  height: MediaQuery.sizeOf(context).height * 0.04,
+                  width: MediaQuery.sizeOf(context).width,
+                  color: Colors.grey.shade200,
                   child: const Text(
                     "K",
                     style: TextStyle(
@@ -247,7 +264,6 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
                   ),
-                  color: Colors.grey.shade200,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -301,12 +317,9 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
                 ),
                 Container(
                   padding: const EdgeInsets.all(5),
-                  height: MediaQuery
-                      .sizeOf(context)
-                      .height * 0.04,
-                  width: MediaQuery
-                      .sizeOf(context)
-                      .width,
+                  height: MediaQuery.sizeOf(context).height * 0.04,
+                  width: MediaQuery.sizeOf(context).width,
+                  color: Colors.grey.shade200,
                   child: const Text(
                     "M",
                     style: TextStyle(
@@ -314,7 +327,6 @@ class _ContactHomeAndroidScreenState extends State<ContactHomeAndroidScreen> {
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
                   ),
-                  color: Colors.grey.shade200,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),

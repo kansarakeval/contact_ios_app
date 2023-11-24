@@ -1,4 +1,6 @@
+import 'package:contact_ios_app/screen/contact/provider/homeprovider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ContactInfoAndroidScreen extends StatefulWidget {
   const ContactInfoAndroidScreen({super.key});
@@ -9,8 +11,13 @@ class ContactInfoAndroidScreen extends StatefulWidget {
 }
 
 class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
+  HomeProvider? providerw;
+  HomeProvider? providerr;
+
   @override
   Widget build(BuildContext context) {
+    providerw = context.watch<HomeProvider>();
+    providerr = context.read<HomeProvider>();
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -18,22 +25,22 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(Icons.arrow_back_outlined),
+            icon: const Icon(Icons.arrow_back_outlined),
           ),
           actions: [
             Row(
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.mode_edit_outline_outlined),
+                  icon: const Icon(Icons.mode_edit_outline_outlined),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.star_border_outlined),
+                  icon: const Icon(Icons.star_border_outlined),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.more_vert_rounded),
+                  icon: const Icon(Icons.more_vert_rounded),
                 ),
               ],
             )
@@ -45,7 +52,7 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
             CircleAvatar(
               radius: 70,
               backgroundColor: Colors.yellowAccent.shade100,
-              child: Text(
+              child: const Text(
                 "A",
                 style: TextStyle(
                     fontSize: 32,
@@ -53,12 +60,12 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                     color: Colors.black),
               ),
             ),
-            SizedBox(height: 10,),
-            Text(
+            const SizedBox(height: 10,),
+            const Text(
               "Ankit Kansara",
               style: TextStyle(fontSize: 27, color: Colors.black),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
@@ -71,13 +78,13 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                       backgroundColor: Colors.blue.shade100,
                       child: IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.call_outlined),
+                        icon: const Icon(Icons.call_outlined),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
-                    Text(
+                    const Text(
                       "Call",
                       style: TextStyle(fontSize: 15, color: Colors.black),
                     ),
@@ -90,13 +97,13 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                       backgroundColor: Colors.blue.shade100,
                       child: IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.message_outlined),
+                        icon: const Icon(Icons.message_outlined),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
-                    Text(
+                    const Text(
                       "Text",
                       style: TextStyle(fontSize: 15, color: Colors.black),
                     ),
@@ -109,13 +116,13 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                       backgroundColor: Colors.blue.shade100,
                       child: IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.video_camera_back_outlined),
+                        icon: const Icon(Icons.video_camera_back_outlined),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
-                    Text(
+                    const Text(
                       "Video",
                       style: TextStyle(fontSize: 15, color: Colors.black),
                     ),
@@ -123,14 +130,18 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
-              margin: EdgeInsets.all(10),
-              padding: EdgeInsets.all(10),
-              width: MediaQuery.sizeOf(context).width,
-              height: MediaQuery.sizeOf(context).height * 0.30,
+              margin: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
+              width: MediaQuery
+                  .sizeOf(context)
+                  .width,
+              height: MediaQuery
+                  .sizeOf(context)
+                  .height * 0.40,
               decoration: BoxDecoration(
                 color: Colors.grey.shade200,
                 borderRadius: BorderRadius.circular(20),
@@ -138,14 +149,14 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Contact info",
                     style: TextStyle(fontSize: 22, color: Colors.black),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Row(
+                  const Row(
                     children: [
                       Icon(Icons.call_outlined),
                       SizedBox(
@@ -172,7 +183,7 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                       Icon(Icons.message_outlined),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
@@ -182,16 +193,16 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                         width: 25,
                         height: 25,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Text(
+                      const Text(
                         "Message +91 1234 5678 90",
                         style: TextStyle(fontSize: 18),
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
@@ -201,16 +212,16 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                         width: 25,
                         height: 25,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Text(
+                      const Text(
                         "Voice call +91 1234 5678 90",
                         style: TextStyle(fontSize: 18),
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
@@ -220,13 +231,34 @@ class _ContactInfoAndroidScreenState extends State<ContactInfoAndroidScreen> {
                         width: 25,
                         height: 25,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Text(
+                      const Text(
                         "Video Call +91 1234 5678 90",
                         style: TextStyle(fontSize: 18),
                       )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        "Date ${providerw!.date!.day}/${providerw!.date!
+                            .month}/${providerw!.date!.year}",
+                        style: const TextStyle(fontSize: 18),
+                      ),
+                      const Spacer(),
+                      IconButton(onPressed: () async {
+                       DateTime? d1 = await showDatePicker(context: context,
+                            initialDate: providerr!.date!,
+                            firstDate: DateTime(2001),
+                            lastDate: DateTime(2025),
+                        );
+                       providerr!.changDate(d1!);
+                      }, icon: const Icon(Icons.date_range),)
                     ],
                   ),
                 ],

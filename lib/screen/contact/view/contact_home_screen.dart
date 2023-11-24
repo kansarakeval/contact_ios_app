@@ -13,7 +13,7 @@ class _ContactHomeScreenState extends State<ContactHomeScreen> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        leading: Row(
+        leading: const Row(
           children: [
             Icon(CupertinoIcons.back),
             Text(
@@ -22,36 +22,55 @@ class _ContactHomeScreenState extends State<ContactHomeScreen> {
             ),
           ],
         ),
-        trailing: GestureDetector(
-            onTap: () {
-              showCupertinoModalPopup(
-                context: context,
-                builder: (context) => CupertinoActionSheet(
-                  actions: [
-                    CupertinoActionSheetAction(
-                      isDestructiveAction: false,
-                      onPressed: () {},
-                      child: Text("yes"),
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            GestureDetector(
+                onTap: () {
+                  showCupertinoModalPopup(
+                    context: context,
+                    builder: (context) => CupertinoActionSheet(
+                      actions: [
+                        CupertinoActionSheetAction(
+                          isDestructiveAction: false,
+                          onPressed: () {},
+                          child: const Text("yes"),
+                        ),
+                        CupertinoActionSheetAction(
+                          isDestructiveAction: true,
+                          onPressed: () {},
+                          child: const Text("No"),
+                        ),
+                      ],
                     ),
-                    CupertinoActionSheetAction(
-                      isDestructiveAction: true,
-                      onPressed: () {},
-                      child: Text("No"),
-                    )
-                  ],
+                  );
+                },
+                child: const Icon(CupertinoIcons.info_circle)),
+            CupertinoContextMenu(
+              actions: const [
+                CupertinoContextMenuAction(
+                  child: Text("Setting"),
                 ),
-              );
-            },
-            child: Icon(CupertinoIcons.info_circle)),
+                CupertinoContextMenuAction(
+                  child: Text("Date"),
+                ),
+                CupertinoContextMenuAction(
+                  child: Text("Time"),
+                ),
+              ],
+              child: const FlutterLogo(),
+            ),
+          ],
+        ),
       ),
       child: Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
           child: GestureDetector(
             onTap: () {
               Navigator.pushNamed(context, 'info');
             },
-            child: Column(
+            child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
@@ -64,9 +83,11 @@ class _ContactHomeScreenState extends State<ContactHomeScreen> {
                       fontSize: 35,
                       fontWeight: FontWeight.bold),
                 ),
+                SizedBox(height: 10,),
                 CupertinoSearchTextField(
                   placeholder: 'search',
                 ),
+                SizedBox(height: 10,),
                 Text(
                   "A",
                   style: TextStyle(
