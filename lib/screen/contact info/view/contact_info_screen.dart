@@ -26,28 +26,28 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                 onTap: () {
                   Navigator.pop(context);
                 },
-                child: Icon(CupertinoIcons.back)),
-            Text(
+                child: const Icon(CupertinoIcons.back)),
+            const Text(
               "Contect",
               style: TextStyle(color: CupertinoColors.activeBlue),
             ),
           ],
         ),
-        trailing: Text(
+        trailing: const Text(
           "Edit",
           style: TextStyle(color: CupertinoColors.activeBlue),
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 80,
               ),
-              Align(
+              const Align(
                 alignment: Alignment.center,
                 child: Column(
                   children: [
@@ -73,7 +73,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Align(
@@ -87,7 +87,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                         color: CupertinoColors.systemGrey6,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Padding(
+                      child: const Padding(
                         padding: EdgeInsets.all(5),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -102,7 +102,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                         ),
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Container(
                       width: MediaQuery.sizeOf(context).width * 0.25,
                       height: MediaQuery.sizeOf(context).height * 0.08,
@@ -110,7 +110,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                         color: CupertinoColors.systemGrey6,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Padding(
+                      child: const Padding(
                         padding: EdgeInsets.all(5),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -125,7 +125,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                         ),
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Container(
                       width: MediaQuery.sizeOf(context).width * 0.25,
                       height: MediaQuery.sizeOf(context).height * 0.08,
@@ -133,7 +133,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                         color: CupertinoColors.systemGrey6,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Padding(
+                      child: const Padding(
                         padding: EdgeInsets.all(5),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -151,18 +151,18 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 height: MediaQuery.sizeOf(context).height * 0.17,
                 width: MediaQuery.sizeOf(context).height,
                 decoration: BoxDecoration(
                   color: CupertinoColors.systemGrey6,
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
@@ -197,18 +197,18 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 height: MediaQuery.sizeOf(context).height * 0.10,
                 width: MediaQuery.sizeOf(context).height,
                 decoration: BoxDecoration(
                   color: CupertinoColors.systemGrey6,
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
@@ -227,18 +227,18 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 height: MediaQuery.sizeOf(context).height * 0.27,
                 width: MediaQuery.sizeOf(context).height,
                 decoration: BoxDecoration(
                   color: CupertinoColors.systemGrey6,
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
@@ -273,11 +273,11 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 height: MediaQuery.sizeOf(context).height * 0.10,
                 width: MediaQuery.sizeOf(context).height,
                 decoration: BoxDecoration(
@@ -291,10 +291,10 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                       children: [
                         Text(
                           "Date ${providerw!.date!.day}/${providerw!.date!.month}/${providerw!.date!.year}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 20, color: CupertinoColors.black),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         GestureDetector(
                           onTap: () {
                             showCupertinoModalPopup(
@@ -311,11 +311,11 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                               ),
                             );
                           },
-                          child: Icon(CupertinoIcons.calendar),
+                          child: const Icon(CupertinoIcons.calendar),
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
