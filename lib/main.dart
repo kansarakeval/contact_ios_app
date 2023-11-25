@@ -11,7 +11,7 @@ void main() {
       MultiProvider(providers: [
         ChangeNotifierProvider(create: (context) => HomeProvider(),),
       ],
-        child: Platform.isAndroid
+        child: Platform.isIOS
             ? MaterialApp(
           theme: ThemeData(useMaterial3: true),
           debugShowCheckedModeBanner: false,

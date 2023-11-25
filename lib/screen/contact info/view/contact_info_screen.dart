@@ -13,6 +13,7 @@ class ContactInfoScreen extends StatefulWidget {
 class _ContactInfoScreenState extends State<ContactInfoScreen> {
   HomeProvider? providerw;
   HomeProvider? providerr;
+
   @override
   Widget build(BuildContext context) {
     providerw = context.watch<HomeProvider>();
@@ -277,7 +278,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
               ),
               Container(
                 padding: EdgeInsets.all(10),
-                height: MediaQuery.sizeOf(context).height * 0.20,
+                height: MediaQuery.sizeOf(context).height * 0.10,
                 width: MediaQuery.sizeOf(context).height,
                 decoration: BoxDecoration(
                   color: CupertinoColors.systemGrey6,
@@ -289,54 +290,71 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                     Row(
                       children: [
                         Text(
-                          "Date ${providerw!.date!.day}/${providerw!.date!
-                              .month}/${providerw!.date!.year}",
+                          "Date ${providerw!.date!.day}/${providerw!.date!.month}/${providerw!.date!.year}",
                           style: TextStyle(
                               fontSize: 20, color: CupertinoColors.black),
                         ),
                         Spacer(),
                         GestureDetector(
-                            onTap: () {
-                              showCupertinoModalPopup(
-                                context: context,
-                                builder: (context) => SizedBox(
-                                  height: 200,
-                                  child: CupertinoDatePicker(
-                                    initialDateTime: providerr!.date,
-                                    backgroundColor: Colors.white,
-                                    onDateTimeChanged: (value) {
-                                      providerr!.changDate(value);
-                                    },
-                                  ),
+                          onTap: () {
+                            showCupertinoModalPopup(
+                              context: context,
+                              builder: (context) => SizedBox(
+                                height: 200,
+                                child: CupertinoDatePicker(
+                                  initialDateTime: providerr!.date,
+                                  backgroundColor: Colors.white,
+                                  onDateTimeChanged: (value) {
+                                    providerr!.changDate(value);
+                                  },
                                 ),
-                              );
-                            },
-                            child: Icon(CupertinoIcons.calendar),),
+                              ),
+                            );
+                          },
+                          child: Icon(CupertinoIcons.calendar),
+                        ),
                       ],
+                    ),
+                    SizedBox(
+                      height: 10,
                     ),
                     Row(
                       children: [
-                        Text("Time : ${providerr!.time!.hour}:${providerr!.time!.minute}"),
-                        Spacer(),
-                        // GestureDetector(onTap: (){
-                        //   showCupertinoModalPopup(context: context,
-                        //     builder:(context) => SizedBox(
-                        //       height: 200,
-                        //       child: CupertinoDatePicker(
-                        //         backgroundColor: Colors.grey.shade500,
-                        //         initialDateTime: providerr!.time,
-                        //         mode: CupertinoDatePickerMode.time,
-                        //         use24hFormat: true,
-                        //         onDateTimeChanged: (value) {
-                        //           providerr!.changTime(value);
-                        //         },),
-                        //     ),
-                        //   );
-                        //     },
-                        //     child: Icon(CupertinoIcons.time)),
+                        Text(
+                          "Time : ${providerr!.time!.hour}:${providerr!.time!.minute}",
+                          style: const TextStyle(
+                              fontSize: 20, color: CupertinoColors.black),
+                        ),
+                        const Spacer(),
+                        GestureDetector(
+                          onTap: () {
+                            showCupertinoModalPopup(
+                              context: context,
+                              builder: (context) {
+                                return SizedBox(
+                                  height: 200,
+                                  child: CupertinoTimerPicker(
+                                    mode: CupertinoTimerPickerMode.hm,
+                                    backgroundColor: CupertinoColors.white,
+                                    onTimerDurationChanged: (value) {
+                                      List<String>l1=value.toString().split(':');
+                                      TimeOfDay? t1 = TimeOfDay(
+                                          hour: int.parse(l1[0]),
+                                          minute: int.parse(l1[1]));
+                                      providerr!.changTime(t1);
+                                    },
+                                    initialTimerDuration: Duration(
+                                        hours: providerr!.time!.hour,
+                                        minutes: providerr!.time!.minute),
+                                  ),
+                                );
+                              },
+                            );
+                          },
+                          child: const Icon(CupertinoIcons.time),
+                        ),
                       ],
                     ),
-
                   ],
                 ),
               ),

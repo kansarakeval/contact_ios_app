@@ -58,7 +58,7 @@ class _ContactHomeScreenState extends State<ContactHomeScreen> {
                   child: Text("Time"),
                 ),
               ],
-              child: const FlutterLogo(),
+              child: Icon(CupertinoIcons.ellipsis_vertical),
             ),
           ],
         ),
