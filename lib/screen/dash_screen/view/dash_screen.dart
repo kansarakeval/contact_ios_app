@@ -1,10 +1,9 @@
 import 'package:contact_ios_app/screen/contact%20info/view/contact_info_android_screen.dart';
-import 'package:contact_ios_app/screen/contact/provider/homeprovider.dart';
 import 'package:contact_ios_app/screen/contact/view/contact_home_android_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../provider/dash_screen_provider.dart';
+import '../provider/dash_provider.dart';
 
 class DashScreen extends StatefulWidget {
   const DashScreen({super.key});

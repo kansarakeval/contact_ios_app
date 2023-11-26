@@ -156,7 +156,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
               ),
               Container(
                 padding: const EdgeInsets.all(10),
-                height: MediaQuery.sizeOf(context).height * 0.17,
+                height: MediaQuery.sizeOf(context).height * 0.19,
                 width: MediaQuery.sizeOf(context).height,
                 decoration: BoxDecoration(
                   color: CupertinoColors.systemGrey6,
@@ -232,7 +232,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
               ),
               Container(
                 padding: const EdgeInsets.all(10),
-                height: MediaQuery.sizeOf(context).height * 0.27,
+                height: MediaQuery.sizeOf(context).height * 0.30,
                 width: MediaQuery.sizeOf(context).height,
                 decoration: BoxDecoration(
                   color: CupertinoColors.systemGrey6,
@@ -278,7 +278,7 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
               ),
               Container(
                 padding: const EdgeInsets.all(10),
-                height: MediaQuery.sizeOf(context).height * 0.10,
+                height: MediaQuery.sizeOf(context).height * 0.12,
                 width: MediaQuery.sizeOf(context).height,
                 decoration: BoxDecoration(
                   color: CupertinoColors.systemGrey6,
